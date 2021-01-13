@@ -1,0 +1,70 @@
+class Event:
+	week = ['S', 'M', 'T', 'W', 'R', 'F', 'A']
+
+	def __init__(self, fileline: str):
+		stringList = fileline.split(' ')
+
+		self.name = stringList[0].replace('_', ' ')
+
+		self.daysOfWeek = [0] * 7
+		for c in stringList[1]:
+			self.daysOfWeek[Event.week.index(c)] = 1
+
+		self.startTime, endTime = [
+			self.strTimeToNum(temp) for temp in stringList[2][:].split('-')
+		]
+		self.eventLength = endTime - self.startTime
+
+		self.color = [
+			int(stringList[3]),
+			int(stringList[4]),
+			int(stringList[5])
+		]
+
+	def strTimeToNum(self, line: str):  # 09:15AM
+		total = int(line[0:2]) % 12 * 60 + int(line[3:5])
+		if line[5:7] == "PM":
+			total += 720
+		return total
+
+	def numTimeToStr(self, time: int):
+		temp = ""
+		hour = int(time / 60 - 1) % 12 + 1
+		minute = time % 60
+		if hour < 10:
+			temp += '0'
+		temp += str(hour) + ':'
+		if minute < 10:
+			temp += '0'
+		temp += str(minute)
+		if time >= 720:
+			return temp + "PM"
+		return temp + "AM"
+
+	def exportEvent(self):
+		line = self.name.replace(' ', '_') + ' '
+		for i in range(7):
+			if self.daysOfWeek[i]:
+				line += Event.week[i]
+		print(self.numTimeToStr(605))
+		line += ' ' + self.numTimeToStr(self.startTime) + '-' + self.numTimeToStr(self.startTime + self.eventLength)
+		for value in self.color:
+			line += ' ' + str(value)
+		return line
+
+	def printDat(self):
+		print(self.name)
+		print(self.daysOfWeek)
+		print(self.startTime)
+		print(self.eventLength)
+		print(self.color)
+
+
+fline = "Mechanics_II MWF 09:15AM-10:05AM 130 60 60"
+
+class1 = Event(fline)
+print(fline)
+print()
+class1.printDat()
+print()
+print(class1.exportEvent())

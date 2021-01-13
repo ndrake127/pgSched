@@ -1,0 +1,109 @@
+{
+  "name": "Spring 2021",
+  "color": [
+    35,
+    32,
+    30
+  ],
+  "events": {
+    "Mechanics II": {
+      "name": "Mechanics II",
+      "days": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "start": 555,
+      "length": 50,
+      "color": [
+        130,
+        60,
+        60
+      ]
+    },
+    "DS & A II Lab": {
+      "name": "DS & A II Lab",
+      "days": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "start": 600,
+      "length": 50,
+      "color": [
+        130,
+        60,
+        60
+      ]
+    },
+    "DS & A II": {
+      "name": "D & A II",
+      "days": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "start": 590,
+      "length": 75,
+      "color": [
+        130,
+        60,
+        130
+      ]
+    },
+    "Discrete Structures": {
+      "name": "Discrete Sctructures",
+      "days": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "start": 790,
+      "length": 75,
+      "color": [
+        60,
+        60,
+        130
+      ]
+    },
+    "Thermal": {
+      "name": "Thermal",
+      "days": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "start": 780,
+      "length": 50,
+      "color": [
+        100,
+        80,
+        80
+      ]
+    }
+  }
+}
+Optics MW 03:30PM-04:20PM 60 130 60
+Optics T 02:50PM-05:30PM 60 130 60
+Psychology MW	08:00AM-08:50AM 130 130 60
+Sleep SMTWRFA 00:00AM-05:40AM 60 60 60

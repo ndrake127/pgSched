@@ -1,0 +1,48 @@
+{
+  "name": "Spring 2021",
+  "color": [
+    35,
+    32,
+    30
+  ],
+  "events": {
+    "Mechanics II": {
+      "name": "Mechanics II",
+      "days": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "start": 555,
+      "length": 50,
+      "color": [
+        130,
+        60,
+        60
+      ]
+    },
+    "D & A II": {
+      "name": "D & A II",
+      "days": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "start": 600,
+      "length": 50,
+      "color": [
+        130,
+        60,
+        60
+      ]
+    }
+  }
+}

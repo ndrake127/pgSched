@@ -1,0 +1,42 @@
+SCHEDULE PROGRAM:
+
+-Execution
+-Provided option to either 'Open Schedule' or 'Create Schedule'
+
+OPEN SCHEDULE:
+-User will be provided option to Select Schedule from previously opened file paths (schedule names will be shown)
+-As well as an option to specify new file path to another schedule
+-This means that the program will need a redundant file to refer to, as a part of the software itself
+
+NEW SCHEDULE:
+-The User will be asked to name the schedule
+-Then the user will be provided a blank schedule
+
+
+USER INTERATION: //// Should we make it all mouse based? An action button, fast double click, that acesses menu
+-Pressing 'A', the user will be provided interface to 'ADD' an event
+-Pressing 'E', 'EDIT' mode, user will select event, and same interface will be provided
+-Pressing 'C', 'CANCEL', this will cancle the actions
+-CLicking MOUSE on event in schedule screen will provide event information
+-Pressing 'S', will provide schedule options
+
+
+[A] -- Adding Event
++ Event Name
++ Days which events take place
+
+
+[E] -- Editing Event
+
+
+[C] -- Canceling Event
+
+
+[MOUSE] --
+
+
+[S] -- Schedule Options
++ Military Time
++ Base Color
++ Schedule Name
+
