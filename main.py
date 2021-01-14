@@ -2,14 +2,16 @@ import pygame
 from pygame import gfxdraw
 import math
 import time
-
 from InteractiveScreen import InteractiveScreen
-from FileManager import FileManager
+#from FileManager import FileManager
 
+#time.sleep(10)
+#screen = pygame.display.set_mode((400, 400))
+#screen.fill([38, 35, 30])
 pygame.init()
 
-state = 0
-states = []
+#state = 0
+states = {} # Use a dictionary so that we can say 'Jump to "Main Menu"'
 
 # Declare and generate Global Variables #
 #manager = FileManager()
@@ -17,9 +19,12 @@ states = []
 # Like double click
 #states.append(manager.load("schedules/schedule.json"))
 
-#mainMenu = InteractiveScreen()
-			    #   Rectangle info,   button color, label,  labelLoc, size, stateTo
-#mainMenu.addButton((50, 50, 25, 25), [60, 60, 130], "Load", (50, 40), 10, 1)  
+states["Main Menu"] = InteractiveScreen()
+			               #   Rectangle info,   button color, label,  labelLoc, size, stateTo
+states["Main Menu"].addButton((50, 50, 25, 25), [60, 60, 130], "Load", (50, 40), 10, 1)  
+
+
+
 running = True
 done = False
 while running and not done:
