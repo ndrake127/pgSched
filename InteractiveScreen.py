@@ -1,27 +1,28 @@
 import pygame
 
 class InteractiveScreen:  # Object from which all user interaction is built from
-	screenWidth, screenHeight = 430, 400
+	screenWidth, screenHeight = 430, 500
 	screen = pygame.display.set_mode((screenWidth, screenHeight))
 	screen.fill([38, 35, 30])  # redundant
 
 	class Button:
 		def __init__(self, rectDat, color, label, labelLoc, size, stateTo):
-			self.rectDat = (rectDat[0] * InteractiveScreen.screenWidth,
-							rectDat[1] * InteractiveScreen.screenHeight,
-							rectDat[2] * InteractiveScreen.screenWidth,
-							rectDat[3] * InteractiveScreen.screenHeight)  # Data of starting point, width, and heightself.color = [100, 25, 25]
+			self.rectDat = (rectDat[0] / 100 * InteractiveScreen.screenWidth,
+							rectDat[1] / 100 * InteractiveScreen.screenHeight,
+							rectDat[2] / 100 * InteractiveScreen.screenWidth,
+							rectDat[3] / 100 * InteractiveScreen.screenHeight)  # Data of starting point, width, and heightself.color = [100, 25, 25]
 			self.color = color
 			self.label = label  # What the button says
-			self.labelLoc = labelLoc  # Where the label apears
-			self.labelSize = size
+			self.labelLoc = (labelLoc[0] / 100 * InteractiveScreen.screenWidth, 
+							 labelLoc[1] / 100 * InteractiveScreen.screenHeight)  # Where the label apears
+			self.labelSize = round(size / 100 * InteractiveScreen.screenHeight)
 			self.stateTo = stateTo
 
 		def isClicked(self, mouseX, mouseY):
 			return
 
 		def draw(self):
-			pygame.rect.draw(InteractiveScreen.screen, self.color, self.rectDat)
+			pygame.draw.rect(InteractiveScreen.screen, self.color, self.rectDat)
 			InteractiveScreen.draw_text(self.label, self.labelLoc, self.labelSize)
 
 	def __init__(self):			# The constructor
