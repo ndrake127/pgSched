@@ -4,6 +4,10 @@ from InteractiveScreen import InteractiveScreen
 class Schedule(InteractiveScreen):
 	pass
 	def __init__(self, data):
+
+		# Inherit variables defined in parents init function #
+		InteractiveScreen.__init__(self)
+
 		self.name = data["name"]
 		self.isMilitary = False
 		self.events = []

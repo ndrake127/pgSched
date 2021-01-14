@@ -1,0 +1,14 @@
+# We need to draw the active screen, how do we switch between screens that are drawn?
+		# Maybe, with the finite state shitsdoole, we have every screen pre planned out inside of an array
+		# Say the array is called 'states', so when the program starts out, we are at the entry point,
+		# The main menu, states[0], the in order to draw it we just need to call 'states[0].draw',
+		# that '0' will be taken up by a 'state' variable. So as we interact with the program, main will
+		# change the 'state' variable to the needed state, jumping around the array, calling the .draw()
+		# Function constatly for the given interactive screen. So in the end, through main, we must create
+		# ALl of the interactive screens, and hop around the array with the array through the states themself
+		# the while loop will infinitely call states[state].draw, to display what is happening
+		# Maybe, it could work something like this
+		#
+        # if mode == schedule (show schedule)
+        # if mouse on event (show name and time)
+        # if mode == add event (show ui)
