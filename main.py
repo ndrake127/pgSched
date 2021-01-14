@@ -18,13 +18,13 @@ states = {} # Use a dictionary so that we can say 'Jump to "Main Menu"'
 # How about we build the schedule with an 'InteractiveScreen' and for the special characteristics it has,
 # Like double click
 #states.append(manager.load("schedules/schedule.json"))
-
+print("About to make screen")
 states["Main Menu"] = InteractiveScreen()
 						   #   Lets have the 'labelLoc' Specify where we want the center of the label to be
-			               #   Rectangle info,   button color, label,  labelLoc, size, stateTo
-states["Main Menu"].addButton((55, 25, 40, 50), [60, 60, 130], "Load", (65, 48), 10, "Load")  
-states["Main Menu"].addButton((5, 25, 40, 50), [130, 60, 130], "Create", (12, 48), 10, "Create")  
-states["Main Menu"].base = [38, 35, 30]
+			               #   Rectangle info,  button color, label,  labelLoc, size, labelColor, stateTo
+states["Main Menu"].addButton((55, 25, 40, 50), [232, 129, 52], "LOAD", (75, 50), 20, (247, 246, 225), "Load")  
+states["Main Menu"].addButton((5, 25, 40, 50), [232, 129, 52], "CREATE", (25, 50), 20, (247, 246, 225), "Create")
+states["Main Menu"].base = [4, 35, 48]
 
 
 
